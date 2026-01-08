@@ -54,7 +54,7 @@ require_once('../assets/constants/fetch-my-info.php');
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Salary Slip Report </h4>
+                        <h4>FLATS Salary Slip Report </h4>
                     </div>
                     <div class="card-body">
                         <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">

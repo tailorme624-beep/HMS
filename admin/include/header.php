@@ -39,7 +39,7 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
                 <a class="navbar-brand" href="index.php">
                 
-                                <img class="img-fluid" src="../assets/uploadImage/Logo/<?php echo$login_logo; ?>" style="width:220px;height:auto;" alt="Theme-Logo" />
+                                <img class="img-fluid" src="../assets/uploadImage/Logo/<?php echo$login_logo; ?>" style="width:100px;height:70px;" alt="Theme-Logo" />
                             </a>
  
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

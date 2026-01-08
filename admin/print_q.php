@@ -227,7 +227,7 @@ $web = $statement->fetch(PDO::FETCH_ASSOC);
                             </div>
                         </div>
                         <div class="card-footer bg-white">
-                            <p class="mb-0">Thank you for your business !</p>
+                            <p class="mb-0">Thank you for your working with us !</p>
                         </div>
                     </div>
                     <input id="printbtn" type="button" value="Print Invoice" onclick="window.print();">

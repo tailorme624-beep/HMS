@@ -4,6 +4,7 @@
 session_start();
 require_once('assets/constants/config.php');
 require_once('assets/constants/fetch-my-info.php');
+require_once('assets/constants/csrf.php');
 
 ?>
 <?php
@@ -62,6 +63,7 @@ require_once('assets/constants/fetch-my-info.php');
                                 <?php require_once('assets/constants/check-reply.php'); ?>
 
                  <form action="assets/app/auth1.php" method="POST" autocomplete="OFF">
+                     <input type="hidden" name="csrf_token" value="<?php echo generate_csrf_token(); ?>">
                    <div class="form-group">
                         <input class="form-control form-control-lg" id="username" type="text" placeholder="Email" autocomplete="off" name="email">
                     </div>

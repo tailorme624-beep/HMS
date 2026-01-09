@@ -7,9 +7,15 @@ require_once('../assets/constants/config.php');
 require_once('../assets/constants/check-login.php');
 require_once('../assets/constants/fetch-my-info.php');
 
-$stmt = $conn->prepare("SELECT * FROM borrow WHERE id=? and delete_status='0'");
-$stmt->execute([$_POST['id']]);
-$result = $stmt->fetchAll();
+
+if ($conn !== null) {
+    $stmt = $conn->prepare("SELECT * FROM borrow WHERE id=? and delete_status='0'");
+    $stmt->execute([$_POST['id']]);
+    $result = $stmt->fetchAll();
+} else {
+    // Handle the error appropriately, e.g., log or display an error message
+    die('Database connection error.');
+}
 ?>
 
 <div class="dashboard-wrapper">

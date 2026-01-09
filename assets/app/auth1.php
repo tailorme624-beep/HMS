@@ -6,6 +6,12 @@ error_reporting(0);
 session_start();
 //configuration file
 require_once('../constants/config.php');
+require_once('../constants/csrf.php');
+
+// Validate CSRF token
+if (!isset($_POST['csrf_token']) || !validate_csrf_token($_POST['csrf_token'])) {
+    die('CSRF token validation failed.');
+}
 
 $email_address = $_POST['email'];
 
@@ -127,11 +133,11 @@ $_SESSION['avator'] = $GLOBALS['avator'];
 <?php }
 
 function student_login() {
-	 
+
 $_SESSION['logged'] = "1";
 //$_SESSION['role'] = "users";
-$_SESSION['role'] = $role;
-$_SESSION['email'] = $_POST['email_address'];
-$_SESSION['avator'] = $avator;
+$_SESSION['role'] = $GLOBALS['role'];
+$_SESSION['email'] = $_POST['email'];
+$_SESSION['avator'] = $GLOBALS['avator'];
 }
 ?>
